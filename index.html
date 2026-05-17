@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Ujian SAS 4D 2025/2026 - SDN Barambai Kolam Kiri 5</title>
+    <style>
+        /* Pengaturan Dasar */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Latar Belakang Animasi Gradasi */
+        body {
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1a2a6c);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Kotak Kaca Utama Lebar */
+        .glass-container {
+            max-width: 1200px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 50px;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            align-items: center;
+        }
+
+        /* Bagian Kiri (Teks & Profil) */
+        .info-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Style Logo Sekolah */
+        .school-logo {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            margin-bottom: 25px;
+            animation: float 6s ease-in-out infinite;
+            background-color: white;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            line-height: 1.3;
+            margin-bottom: 15px;
+            background: -webkit-linear-gradient(#fff, #a1c4fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #d1d8e0;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Bagian Kanan (Grid Tombol 4D) */
+        .links-section {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            perspective: 1000px;
+        }
+
+        /* Tombol Efek 4D / Kaca */
+        .btn-4d {
+            position: relative;
+            background: rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            border-bottom: 1px solid transparent;
+            border-right: 1px solid transparent;
+            padding: 30px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .btn-4d span {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Efek Kilat Bergerak di dalam tombol */
+        .btn-4d::before {
+            content: '';
+            position: absolute;
+            top: 0; 
+            left: -150%; 
+            width: 50%; 
+            height: 100%;
+            background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.4), rgba(255,255,255,0));
+            transform: skewX(-25deg);
+            transition: 0.5s;
+        }
+
+        .btn-4d:hover {
+            transform: translateY(-15px) scale(1.05) rotateX(5deg) rotateY(-5deg);
+            box-shadow: -10px 20px 30px rgba(0,0,0,0.4), inset 0 0 15px rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
+            z-index: 10;
+        }
+
+        .btn-4d:hover::before {
+            left: 150%;
+        }
+
+        /* Animasi Melayang untuk Logo */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Responsif untuk Layar HP */
+        @media (max-width: 900px) {
+            .glass-container {
+                flex-direction: column;
+                padding: 30px 20px;
+            }
+            .links-section {
+                grid-template-columns: 1fr;
+                width: 100%;
+            }
+            h1 { font-size: 2rem; }
+            .school-logo { width: 100px; height: 100px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glass-container">
+        
+        <div class="info-section">
+            <img src="logo-sekolah.png" alt="Logo SDN Barambai Kolam Kiri 5" class="school-logo">
+            
+            <h1>Portal SAS Genap<br>Kelas 6<br>TP 2025/2026</h1>
+            <p><b>SDN Barambai Kolam Kiri 5</b><br><br>Selamat datang di portal ujian interaktif. Silakan pilih mata pelajaran sesuai jadwal yang telah ditentukan. Berdoalah sebelum menekan tombol mulai!</p>
+        </div>
+
+        <div class="links-section">
+            <a href="https://forms.gle/D3WpQ8jEttJ41GeK8" class="btn-4d" target="_blank">
+                <span>📐</span> Matematika
+            </a>
+            <a href="https://forms.gle/gQ6ry4MGjM7cH8h98" class="btn-4d" target="_blank">
+                <span>🕌</span> PAI
+            </a>
+            
+            <a href="https://forms.gle/rYC5J1bgcGi4wQdw5" class="btn-4d" target="_blank">
+                <span>📖</span> PKn
+            </a>
+            <a href="LINK_IPAS_DISINI" class="btn-4d" target="_blank">
+                <span>🔬</span> IPAS
+            </a>
+            
+            <a href="https://forms.gle/8JgBv3uvgmpN934g8" class="btn-4d" target="_blank">
+                <span>📝</span> Bahasa Indonesia
+            </a>
+            <a href="https://forms.gle/AZuHXRww7bUvLHJH9" class="btn-4d" target="_blank">
+                <span>🗣️</span> Bahasa Inggris
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
