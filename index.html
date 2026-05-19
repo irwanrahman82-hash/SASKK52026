@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Ujian SAS 4D 2025/2026 - SDN Barambai Kolam Kiri 5</title>
+    <title>Portal PSAJO 2025/2026 - SDN Barambai Kolam Kiri 5</title>
     <style>
         /* Pengaturan Dasar */
         * {
@@ -90,14 +90,13 @@
 
         /* Bagian Kanan (Grid Tombol 4D) */
         .links-section {
-            flex: 1;
+            flex: 1.2;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
+            gap: 20px;
             perspective: 1000px;
         }
 
-        /* Tombol Efek 4D / Kaca */
         .btn-4d {
             position: relative;
             background: rgba(255, 255, 255, 0.1);
@@ -105,11 +104,11 @@
             border-left: 1px solid rgba(255, 255, 255, 0.5);
             border-bottom: 1px solid transparent;
             border-right: 1px solid transparent;
-            padding: 30px 20px;
+            padding: 20px 15px;
             border-radius: 20px;
             text-decoration: none;
             color: white;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
             display: flex;
             flex-direction: column;
@@ -122,11 +121,10 @@
         }
 
         .btn-4d span {
-            font-size: 2rem;
-            margin-bottom: 10px;
+            font-size: 1.8rem;
+            margin-bottom: 8px;
         }
 
-        /* Efek Kilat Bergerak di dalam tombol */
         .btn-4d::before {
             content: '';
             position: absolute;
@@ -140,7 +138,7 @@
         }
 
         .btn-4d:hover {
-            transform: translateY(-15px) scale(1.05) rotateX(5deg) rotateY(-5deg);
+            transform: translateY(-10px) scale(1.03) rotateX(5deg) rotateY(-5deg);
             box-shadow: -10px 20px 30px rgba(0,0,0,0.4), inset 0 0 15px rgba(255,255,255,0.2);
             background: rgba(255, 255, 255, 0.2);
             z-index: 10;
@@ -150,14 +148,12 @@
             left: 150%;
         }
 
-        /* Animasi Melayang untuk Logo */
         @keyframes float {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-15px); }
             100% { transform: translateY(0px); }
         }
 
-        /* Responsif untuk Layar HP */
         @media (max-width: 900px) {
             .glass-container {
                 flex-direction: column;
@@ -179,8 +175,8 @@
         <div class="info-section">
             <img src="logo-sekolah.png" alt="Logo SDN Barambai Kolam Kiri 5" class="school-logo">
             
-            <h1>Portal SAS Genap<br>Kelas 6<br>TP 2025/2026</h1>
-            <p><b>SDN Barambai Kolam Kiri 5</b><br><br>Selamat datang di portal ujian interaktif. Silakan pilih mata pelajaran sesuai jadwal yang telah ditentukan. Berdoalah sebelum menekan tombol mulai!</p>
+            <h1>Portal PSAJO<br>Kelas 6<br>TP 2025/2026</h1>
+            <p><b>SDN Barambai Kolam Kiri 5</b><br><br>Selamat datang di portal Penilaian Sumatif Akhir Jenjang Online. Silakan pilih mata pelajaran sesuai jadwal yang telah ditentukan. Selamat berjuang!</p>
         </div>
 
         <div class="links-section">
@@ -194,7 +190,7 @@
             <a href="https://forms.gle/rYC5J1bgcGi4wQdw5" class="btn-4d" target="_blank">
                 <span>📖</span> PKn
             </a>
-            <a href="LINK_IPAS_DISINI" class="btn-4d" target="_blank">
+            <a href="https://forms.gle/YbYQqhSP3ModifCt5" class="btn-4d" target="_blank">
                 <span>🔬</span> IPAS
             </a>
             
@@ -203,6 +199,17 @@
             </a>
             <a href="https://forms.gle/AZuHXRww7bUvLHJH9" class="btn-4d" target="_blank">
                 <span>🗣️</span> Bahasa Inggris
+            </a>
+
+            <a href="https://forms.gle/RgEeSZj5BqiPQy9W8" class="btn-4d" target="_blank">
+                <span>🎨</span> Seni Rupa
+            </a>
+            <a href="https://forms.gle/JMFJ83isc7emWxmL7" class="btn-4d" target="_blank">
+                <span>🏘️</span> Bahasa Banjar
+            </a>
+
+            <a href="https://forms.gle/Z45MoG9JE3UJi1Jm8" class="btn-4d" target="_blank">
+                <span>⚽</span> PJOK
             </a>
         </div>
 
